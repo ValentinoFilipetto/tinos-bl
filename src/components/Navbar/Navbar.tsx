@@ -1,18 +1,26 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
-    <div>
+    <div className="wrapper">
       <nav>
         <ul>
-          <li>About me</li>
-          <li>Music</li>
-          <li>Politics</li>
-          <li>Contact</li>
+          <li>
+            <Link to={"about"}>About Me</Link>
+          </li>
+          <li>
+            <Link to={"music"}>Music</Link>
+          </li>
+          <li>
+            <Link to={"politics"}>Politics</Link>
+          </li>
+          <li>
+            <Link to={"contact"}>Contact</Link>
+          </li>
         </ul>
       </nav>
     </div>
   );
 }
-
-// explore react router for this
 
 export default Navbar;
