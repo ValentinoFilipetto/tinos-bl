@@ -1,26 +1,34 @@
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 function Navbar() {
   return (
-    <div className="wrapper">
+    <NavbarWrapper>
       <nav>
         <ul>
-          <li>
+          <SectionLink>
             <Link to={"about"}>About Me</Link>
-          </li>
-          <li>
+          </SectionLink>
+          <SectionLink>
             <Link to={"music"}>Music</Link>
-          </li>
-          <li>
+          </SectionLink>
+          <SectionLink>
             <Link to={"politics"}>Politics</Link>
-          </li>
-          <li>
+          </SectionLink>
+          <SectionLink>
             <Link to={"contact"}>Contact</Link>
-          </li>
+          </SectionLink>
         </ul>
       </nav>
-    </div>
+    </NavbarWrapper>
   );
 }
+
+const NavbarWrapper = styled.div`
+  border: 2px solid white;
+  width: 400px;
+`;
+
+const SectionLink = styled.li``;
 
 export default Navbar;

@@ -11,6 +11,7 @@ function SectionsPage() {
 
 const OutletWrapper = styled.div`
   background-color: red;
+  width: 900px;
 `;
 
 export default SectionsPage;

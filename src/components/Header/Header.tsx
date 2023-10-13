@@ -15,13 +15,16 @@ function Header() {
 
 const HeaderWrapper = styled.header`
   display: flex;
-  justify-content: space-around;
-  border: 2px solid white;
+  justify-content: center;
+  gap: 144px;
   height: 30vh;
+  border-bottom: 2px solid grey;
+  padding-top: 32px;
 `;
 
 const PicWrapper = styled.div`
   border: 2px solid white;
+  flex-shrink: 0;
   width: 200px;
   height: 200px;
   border-radius: 60%;

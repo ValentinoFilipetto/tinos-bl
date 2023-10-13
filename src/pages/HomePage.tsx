@@ -16,9 +16,8 @@ function HomePage() {
 }
 
 const Wrapper = styled.div`
-  border: 2px solid white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
 
 export default HomePage;
