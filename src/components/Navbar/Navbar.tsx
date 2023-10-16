@@ -3,6 +3,7 @@ import { ImMusic } from "react-icons/im";
 import { MdArticle, MdContactSupport } from "react-icons/md";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { COLORS } from "../../constants/constants";
 
 function Navbar() {
   return (
@@ -56,7 +57,7 @@ const VerticalBar = styled.div`
   border-radius: 30px;
   width: 50px;
   background-color: white;
-  color: #242424;
+  color: ${COLORS.primary};
   margin-right: -77px;
 `;
 
@@ -76,7 +77,7 @@ const NavbarLink = styled(Link)`
 
   &:hover {
     transition: 0.2s ease;
-    color: #26d07c;
+    color: ${COLORS.secondary};
   }
 `;
 
