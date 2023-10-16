@@ -1,34 +1,93 @@
+import { BsPersonCircle } from "react-icons/bs";
+import { ImMusic } from "react-icons/im";
+import { MdArticle, MdContactSupport } from "react-icons/md";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Navbar() {
   return (
     <NavbarWrapper>
-      <nav>
-        <ul>
+      <VerticalBar />
+      <Nav>
+        <UnorderedList>
           <SectionLink>
-            <Link to={"about"}>About Me</Link>
+            <NavbarLink to={"about"}>
+              <BsPersonCircle size={23} />
+
+              <TextLink>About Me</TextLink>
+            </NavbarLink>
           </SectionLink>
           <SectionLink>
-            <Link to={"music"}>Music</Link>
+            <NavbarLink to={"music"}>
+              <ImMusic size={23} />
+
+              <TextLink>Music</TextLink>
+            </NavbarLink>
           </SectionLink>
           <SectionLink>
-            <Link to={"politics"}>Politics</Link>
+            <NavbarLink to={"politics"}>
+              <MdArticle size={23} />
+
+              <TextLink>Articles</TextLink>
+            </NavbarLink>
           </SectionLink>
           <SectionLink>
-            <Link to={"contact"}>Contact</Link>
+            <NavbarLink to={"contact"}>
+              <MdContactSupport size={23} />
+
+              <TextLink>Contact</TextLink>
+            </NavbarLink>
           </SectionLink>
-        </ul>
-      </nav>
+        </UnorderedList>
+      </Nav>
     </NavbarWrapper>
   );
 }
 
 const NavbarWrapper = styled.div`
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  line-height: 48px;
   border: 2px solid white;
-  width: 400px;
 `;
 
-const SectionLink = styled.li``;
+const VerticalBar = styled.div`
+  border-radius: 30px;
+  width: 50px;
+  background-color: white;
+  color: #242424;
+  margin-right: -77px;
+`;
+
+const Nav = styled.nav``;
+
+const UnorderedList = styled.ul`
+  list-style-type: none;
+`;
+
+const SectionLink = styled.li`
+  text-decoration: none;
+`;
+
+const NavbarLink = styled(Link)`
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    transition: 0.2s ease;
+    color: #26d07c;
+  }
+`;
+
+const TextLink = styled.a`
+  margin-left: 28px;
+  display: inline-block;
+
+  &:hover {
+    transition: transform 250ms;
+    transform: translateX(10px);
+  }
+`;
 
 export default Navbar;
