@@ -1,15 +1,7 @@
 import styled from "styled-components";
-import { Picture } from "../../types";
+import { PhotoItemProps } from "../../props/props";
 
-function PhotoItem({
-  picture,
-  width,
-  height,
-}: {
-  picture: Picture;
-  width: number;
-  height: number;
-}) {
+function PhotoItem({ picture, width, height }: PhotoItemProps) {
   const STYLE = {
     width: `${width}px`,
     height: `${height}px`,
