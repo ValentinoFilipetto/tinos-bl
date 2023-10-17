@@ -50,7 +50,7 @@ const NavbarWrapper = styled.div`
   display: flex;
   justify-content: center;
   line-height: 48px;
-  border: 2px solid white;
+  // border: 2px solid white;
 `;
 
 const VerticalBar = styled.div`
@@ -81,7 +81,7 @@ const NavbarLink = styled(Link)`
   }
 `;
 
-const TextLink = styled.a`
+const TextLink = styled.div`
   margin-left: 28px;
   display: inline-block;
 
