@@ -1,4 +1,4 @@
-import { Picture } from "../types";
+import { Picture } from "../types/types";
 
 export interface PhotoItemProps {
   picture: Picture;

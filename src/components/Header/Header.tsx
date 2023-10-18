@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { COLORS } from "../../constants/constants";
 import pictureData from "../../picture-data";
-import { findPictureById } from "../../utils";
+import { findPictureById } from "../../utils/utils";
 import PhotoItem from "../PhotoItem/PhotoItem";
 
 function Header() {
@@ -10,14 +10,10 @@ function Header() {
   if (headerPicture) {
     return (
       <HeaderWrapper>
-        <PresentationWrapper>
-          <h1>
-            Hi there! I'm <HighlightedText>Valentino Filipetto</HighlightedText>
-          </h1>
-        </PresentationWrapper>
-        <ImageWrapper>
-          <PhotoItem picture={headerPicture} width={200} height={200} />
-        </ImageWrapper>
+        <h1>
+          Hi there! I'm <HighlightedText>Valentino Filipetto</HighlightedText>
+        </h1>
+        <PhotoItem picture={headerPicture} width={200} height={200} />
       </HeaderWrapper>
     );
   }
@@ -34,9 +30,5 @@ const HeaderWrapper = styled.header`
 const HighlightedText = styled.span`
   color: ${COLORS.secondary};
 `;
-
-const PresentationWrapper = styled.div``;
-
-const ImageWrapper = styled.div``;
 
 export default Header;
