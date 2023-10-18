@@ -1,33 +1,34 @@
 import styled from "styled-components";
+import { COLORS } from "../../constants/constants";
+import pictureData from "../../picture-data";
+import { findPictureById } from "../../utils/utils";
+import PhotoItem from "../PhotoItem/PhotoItem";
 
 function Header() {
-  return (
-    <HeaderWrapper>
-      <div>
-        <h1>Hi there! I'm Valentino Filipetto</h1>
-      </div>
-      <PicWrapper>
-        <img></img>
-      </PicWrapper>
-    </HeaderWrapper>
-  );
+  const headerPicture = findPictureById(pictureData, "a");
+
+  if (headerPicture) {
+    return (
+      <HeaderWrapper>
+        <h1>
+          Hi there! I'm <HighlightedText>Valentino Filipetto</HighlightedText>
+        </h1>
+        <PhotoItem picture={headerPicture} width={200} height={200} />
+      </HeaderWrapper>
+    );
+  }
 }
 
 const HeaderWrapper = styled.header`
   display: flex;
   justify-content: center;
-  gap: 144px;
-  height: 30vh;
+  gap: 120px;
   border-bottom: 2px solid grey;
-  padding-top: 32px;
+  padding: 32px 0px 64px 0px;
 `;
 
-const PicWrapper = styled.div`
-  border: 2px solid white;
-  flex-shrink: 0;
-  width: 200px;
-  height: 200px;
-  border-radius: 60%;
+const HighlightedText = styled.span`
+  color: ${COLORS.secondary};
 `;
 
 export default Header;
