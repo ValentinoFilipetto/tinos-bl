@@ -4,10 +4,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
 import AboutMe from "./components/AboutMe/AboutMe.tsx";
 import Contact from "./components/Contact/Contact.tsx";
-import MyMusic from "./components/MyMusic/MyMusic.tsx";
-import Politics from "./components/Politics/Politics.tsx";
+
+import Articles from "./components/Articles/Articles.tsx";
 import ErrorPage from "./ErrorPage.tsx";
 import "./index.css";
+import ArticlePage from "./pages/ArticlePage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,18 +21,19 @@ const router = createBrowserRouter([
         element: <AboutMe />,
       },
       {
-        path: "/music",
-        element: <MyMusic />,
+        path: "/articles",
+        element: <Articles />,
       },
-      {
-        path: "/politics",
-        element: <Politics />,
-      },
+
       {
         path: "/contact",
         element: <Contact />,
       },
     ],
+  },
+  {
+    path: "articles/:articleId",
+    element: <ArticlePage />,
   },
 ]);
 

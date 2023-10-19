@@ -1,5 +1,4 @@
 import { BsPersonCircle } from "react-icons/bs";
-import { ImMusic } from "react-icons/im";
 import { MdArticle, MdContactSupport } from "react-icons/md";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -18,15 +17,9 @@ function Navbar() {
               <TextLink>About Me</TextLink>
             </NavbarLink>
           </SectionLink>
-          <SectionLink>
-            <NavbarLink to={"music"}>
-              <ImMusic size={23} />
 
-              <TextLink>Music</TextLink>
-            </NavbarLink>
-          </SectionLink>
           <SectionLink>
-            <NavbarLink to={"politics"}>
+            <NavbarLink to={"articles"}>
               <MdArticle size={23} />
 
               <TextLink>Articles</TextLink>
@@ -47,6 +40,7 @@ function Navbar() {
 
 const NavbarWrapper = styled.div`
   width: 300px;
+  height: 170px;
   display: flex;
   justify-content: center;
   line-height: 48px;

@@ -17,8 +17,9 @@ function HomePage() {
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 48px;
+  gap: 32px;
 `;
 
 export default HomePage;

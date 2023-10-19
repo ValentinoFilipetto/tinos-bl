@@ -5,3 +5,11 @@ export interface PhotoItemProps {
   width: number;
   height: number;
 }
+
+export interface ArticleItemProps {
+  markdown: string;
+}
+
+export interface ArticleCardProps {
+  title: string;
+}
